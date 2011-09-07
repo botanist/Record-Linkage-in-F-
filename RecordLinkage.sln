@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "RecordLinkage", "RecordLinkage\RecordLinkage.fsproj", "{6E9823F3-0D94-478F-9186-EFC5FD316DA0}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "RecordLinkage.Tests", "RecordLinkage.Tests\RecordLinkage.Tests.fsproj", "{E16F0409-94A0-47D5-9A1D-236182D672A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E9823F3-0D94-478F-9186-EFC5FD316DA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E9823F3-0D94-478F-9186-EFC5FD316DA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E9823F3-0D94-478F-9186-EFC5FD316DA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E9823F3-0D94-478F-9186-EFC5FD316DA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E16F0409-94A0-47D5-9A1D-236182D672A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E16F0409-94A0-47D5-9A1D-236182D672A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E16F0409-94A0-47D5-9A1D-236182D672A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E16F0409-94A0-47D5-9A1D-236182D672A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
