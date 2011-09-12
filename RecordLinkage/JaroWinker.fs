@@ -1,4 +1,4 @@
-﻿module RecordLinkage
+﻿module RecordLinkage.JaroWinkler
 
 open System
 

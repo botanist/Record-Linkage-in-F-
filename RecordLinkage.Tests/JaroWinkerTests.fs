@@ -3,7 +3,7 @@
 open System
 
 open Xunit
-open RecordLinkage
+open RecordLinkage.JaroWinkler
 
 //
 // From: http://richardminerich.com/2011/09/record-linkage-algorithms-in-f-jaro-winkler-distance-part-1/
