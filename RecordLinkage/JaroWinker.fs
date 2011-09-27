@@ -4,6 +4,7 @@ open System
 
 //
 // From: http://richardminerich.com/2011/09/record-linkage-algorithms-in-f-jaro-winkler-distance-part-1/
+// And: http://richardminerich.com/2011/09/record-linkage-algorithms-in-f-%e2%80%93-jaro-winkler-distance-part-2/
 //
 
 /// Given an offset and a radius from that offset, 

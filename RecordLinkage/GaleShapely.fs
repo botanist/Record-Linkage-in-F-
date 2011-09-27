@@ -4,7 +4,10 @@ open System
 
 open RecordLinkage.JaroWinkler
 
-open System
+//
+// From: http://richardminerich.com/2011/09/record-linkage-in-f-token-matching-stable-marriages-and-the-gale-shapley-algorithm/
+// And: http://richardminerich.com/2011/09/imperative-pseudocode-to-pure-functional-algorithm/
+//
 
 // a Bachelor is an identity index and an 
 // ordered list of women indicies to approach.
