@@ -75,26 +75,27 @@ let linearSpaceEditDistance (s: string) (t: string) =
                 ((innerEdit (i-1) (j-1)) + 1)
     innerEdit (s.Length) (t.Length) 
 
+
 // The fastest in the bunch.
 let wagnerFischerLazy (s: string) (t: string) =
     let m = s.Length
     let n = t.Length
-    let d = Array2D.create (m + 1) (n + 1) -1
-    let rec dist i j =
-        match i, j with
+    let d = Array2D.create (m+1) (n+1) -1
+    let rec dist =
+        function
         | i, 0 -> i
         | 0, j -> j
-        | _ when d.[i,j] <> -1 -> d.[i,j]
-        | _ ->
+        | i, j when d.[i,j] <> -1 -> d.[i,j]
+        | i, j ->
             let dval = 
-                if s.[i-1] = t.[j-1] then dist (i-1) (j-1)
+                if s.[i-1] = t.[j-1] then dist (i-1, j-1)
                 else
                     min3
-                        ((dist (i-1) j)     + 1) // a deletion
-                        ((dist i     (j-1)) + 1) // an insertion
-                        ((dist (i-1) (j-1)) + 1) // a substitution
+                        (dist (i-1, j)   + 1) // a deletion
+                        (dist (i,   j-1) + 1) // an insertion
+                        (dist (i-1, j-1) + 1) // a substitution
             d.[i, j] <- dval; dval 
-    dist m n
+    dist (m, n)
 
 //
 // Damerau–Levenshtein distance
