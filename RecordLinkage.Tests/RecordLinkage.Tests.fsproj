@@ -38,11 +38,12 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
     <Reference Include="xunit">
-      <HintPath>..\xunit.dll</HintPath>
+      <HintPath>..\tools\xunit\xunit.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="JaroWinkerTests.fs" />
+    <Compile Include="LevenshteinTests.fs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RecordLinkage\RecordLinkage.fsproj">
