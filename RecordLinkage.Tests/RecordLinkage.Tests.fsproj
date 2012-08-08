@@ -51,6 +51,8 @@
       <HintPath>..\packages\xunit.1.9.1\lib\net20\xunit.dll</HintPath>
       <Private>True</Private>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\RecordLinkage\RecordLinkage.fsproj">
       <Name>RecordLinkage</Name>
       <Project>{6e9823f3-0d94-478f-9186-efc5fd316da0}</Project>
