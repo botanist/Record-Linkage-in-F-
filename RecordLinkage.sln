@@ -5,6 +5,13 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "RecordLinkage", "RecordLink
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "RecordLinkage.Tests", "RecordLinkage.Tests\RecordLinkage.Tests.fsproj", "{E16F0409-94A0-47D5-9A1D-236182D672A6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{89317F75-7DDD-4FC7-BF22-531A40B90715}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\nuget.exe = .nuget\nuget.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
