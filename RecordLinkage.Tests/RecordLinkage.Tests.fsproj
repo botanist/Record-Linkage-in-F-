@@ -38,7 +38,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
     <Reference Include="xunit">
-      <HintPath>..\tools\xunit\xunit.dll</HintPath>
+      <HintPath>..\tools\xUnit 1.8\xunit.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
