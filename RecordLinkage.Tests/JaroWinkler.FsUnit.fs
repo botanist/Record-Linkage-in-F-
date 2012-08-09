@@ -27,7 +27,7 @@ let ``Jaro dixon test`` () =
     let result = jaro "DIXON" "DICKSONX"
     String.Format("{0:0.000}", result) |> should equal "0.767"
 [<Test>]
-let ``Jaro address test`` () =
+let ``Jaro street test`` () =
     let result = jaro "MAIN ST" "MAIN STREET"
     String.Format("{0:0.000}", result) |> should equal "0.888"
 
@@ -52,6 +52,38 @@ let ``Jaro-Winkler dixon test`` () =
     let result = jaroWinkler "DIXON" "DICKSONX"
     String.Format("{0:0.000}", result) |> should equal "0.813"
 [<Test>]
-let ``Jaro-Winkler address test`` () =
-    let result = jaroWinkler "MAIN ST" "MAIN STREET"
-    String.Format("{0:0.000}", result) |> should equal "0.933"
+let ``Jaro-Winkler street1 test`` () =
+    let result = jaroWinkler "100 MAIN ST" "100 MAIN STREET"
+    String.Format("{0:0.000}", result) |> should equal "0.952"
+[<Test>]
+let ``Jaro-Winkler street2 test`` () =
+    let result = jaroWinkler "100 MAIN ST" "1000 MAIN STREET"
+    String.Format("{0:0.000}", result) |> should equal "0.867"
+[<Test>]
+let ``Jaro-Winkler street3 test`` () =
+    let result = jaroWinkler "1000 MAIN ST" "100 MAIN STREET"
+    String.Format("{0:0.000}", result) |> should equal "0.876"
+[<Test>]
+let ``Jaro-Winkler city test`` () =
+    let result = jaroWinkler "DETROIT" "DETRIOT"
+    String.Format("{0:0.000}", result) |> should equal "0.971"
+[<Test>]
+let ``Jaro-Winkler address2 test`` () =
+    let result = jaroWinkler "100 MAIN ST" "1000 MAIN STREET"
+    String.Format("{0:0.000}", result) |> should equal "0.867"
+[<Test>]
+let ``Jaro-Winkler address3 test`` () =
+    let result = jaroWinkler "1000 Woodward Ave Detroit, MI 48226" "1000 Woodward Avenue Detroit, MI 48226"
+    String.Format("{0:0.000}", result) |> should equal "0.939"
+[<Test>]
+let ``Jaro-Winkler address4 test`` () =
+    let result = jaroWinkler "1000 Woodward Ave Detroit, MI 48226" "1000 Woodward Avenue Detroit MI 48226"
+    String.Format("{0:0.000}", result) |> should equal "0.935"
+[<Test>]
+let ``Jaro-Winkler address5 test`` () =
+    let result = jaroWinkler "100 Woodward Ave Detroit, MI 48226" "1000 Woodward Avenue Detroit, MI 48226"
+    String.Format("{0:0.000}", result) |> should equal "0.884"
+[<Test>]
+let ``Jaro-Winkler address6 test`` () =
+    let result = jaroWinkler "1000 Woodward Ave Detroit, MI 48226" "1000 Woodward Avenue Detroit, MI 48229"
+    String.Format("{0:0.000}", result) |> should equal "0.930"
