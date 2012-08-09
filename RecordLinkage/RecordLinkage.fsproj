@@ -39,7 +39,7 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="JaroWinker.fs" />
+    <Compile Include="JaroWinkler.fs" />
     <Compile Include="GaleShapely.fs" />
     <Compile Include="JaroWinklerExtensions.fs" />
     <Compile Include="Levenshtein.fs" />
