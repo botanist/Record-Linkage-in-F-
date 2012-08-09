@@ -64,9 +64,25 @@ let ``Jaro-Winkler street3 test`` () =
     let result = jaroWinkler "1000 MAIN ST" "100 MAIN STREET"
     String.Format("{0:0.000}", result) |> should equal "0.876"
 [<Test>]
+let ``Jaro-Winkler street4 test`` () =
+    let result = jaroWinkler "100 MAIN ST" "1000 MAIN ST"
+    String.Format("{0:0.000}", result) |> should equal "0.913"
+[<Test>]
+let ``Jaro-Winkler street5 test`` () =
+    let result = jaroWinkler "1000 MAIN ST" "100 MAIN ST"
+    String.Format("{0:0.000}", result) |> should equal "0.913"
+[<Test>]
 let ``Jaro-Winkler city test`` () =
     let result = jaroWinkler "DETROIT" "DETRIOT"
     String.Format("{0:0.000}", result) |> should equal "0.971"
+[<Test>]
+let ``Jaro-Winkler state test`` () =
+    let result = jaroWinkler "MI" "MO"
+    String.Format("{0:0.000}", result) |> should equal "0.700"
+[<Test>]
+let ``Jaro-Winkler zip test`` () =
+    let result = jaroWinkler "48226" "48229"
+    String.Format("{0:0.000}", result) |> should equal "0.920"
 [<Test>]
 let ``Jaro-Winkler address2 test`` () =
     let result = jaroWinkler "100 MAIN ST" "1000 MAIN STREET"
@@ -87,3 +103,19 @@ let ``Jaro-Winkler address5 test`` () =
 let ``Jaro-Winkler address6 test`` () =
     let result = jaroWinkler "1000 Woodward Ave Detroit, MI 48226" "1000 Woodward Avenue Detroit, MI 48229"
     String.Format("{0:0.000}", result) |> should equal "0.930"
+[<Test>]
+let ``Jaro-Winkler address7 test`` () =
+    let result = jaroWinkler "123 South Main St" "123 S Main St"
+    String.Format("{0:0.000}", result) |> should equal "0.900"
+[<Test>]
+let ``Jaro-Winkler address8 test`` () =
+    let result = jaroWinkler "123 Main Street 1" "123 Main Street Apt 1"
+    String.Format("{0:0.000}", result) |> should equal "0.965"
+[<Test>]
+let ``Jaro-Winkler address9 test`` () =
+    let result = jaroWinkler "313 East Webster Road" "313 E Webster Road"
+    String.Format("{0:0.000}", result) |> should equal "0.915"
+[<Test>]
+let ``Jaro-Winkler address10 test`` () =
+    let result = jaroWinkler "313 North West Webster Road" "313 NW Webster Road"
+    String.Format("{0:0.000}", result) |> should equal "0.913"
