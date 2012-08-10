@@ -85,5 +85,5 @@ let jaroWinkler s1 s2 =
         else calcL (i + 1) (acc + 1.0)
     let l = min (calcL 0 0.0) 4.0
     // Calculate the JW distance
-    let p = 0.1
+    let p = 0.15
     jaroScore + (l * p * (1.0 - jaroScore))
